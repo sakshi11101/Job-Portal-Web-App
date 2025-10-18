@@ -18,6 +18,12 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="style1.css">
 
+    <style>
+        .form-mod{
+            border: #343a40 1px solid;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -49,35 +55,34 @@
                     <h2 class="mb-3 text-center fs-3 font-weight-bold">Post a
                         new Job</h2>
                     <form action="handleForm" method="post">
-                        <div class="mb-1">
+                        <div class="mb-2">
                             <label for="postId" class="form-label">Post ID</label>
-                            <input type="text" class="form-control" id="postId"
-                                   name="postId" required>
+                            <input type="text" class="form-control form-mod" id="postId"
+                                   name="postId" placeholder="Ex: RW123" required>
                         </div>
-
-                        <div class="mb-1">
+                        <br>
+                        <div class="mb-2">
                             <label for="postProfile" class="form-label">Post Profile</label>
-                            <input type="text" class="form-control" id="postProfile" name="postProfile" required>
+                            <input type="text" class="form-control form-mod" id="postProfile" name="postProfile" placeholder="Ex: Software Development Engineer" required>
                         </div>
-
-
-                        <div class="mb-1">
-                            <label for="postDesc" class="form-label">Post Description</label>
-                            <textarea class="form-control" id="postDesc" name="postDesc" rows="2" required></textarea>
+                        <br>
+                        <div class="mb-2">
+                            <label for="postDescription" class="form-label">Post Description</label>
+                            <textarea class="form-control form-mod" id="postDescription" name="postDescription" rows="2" placeholder="Ex: The Job Description...."required></textarea>
                         </div>
+                        <br>
 
-
-                        <div class="mb-1">
-                            <label for="reqExperience" class="form-label">Required
+                        <div class="mb-2">
+                            <label for="requiredExperience" class="form-label">Required
                                 Experience</label>
-                            <input type="number" class="form-control" id="reqExperience" name="reqExperience" required>
+                            <input type="number" class="form-control form-mod" id="requiredExperience" name="requiredExperience" placeholder="Ex: 2" required>
                         </div>
-
+                        <br>
 
                         <div class="mb-2">
                             <label for="postTechStack" class="form-label">Tech Stack</label>
-                            <select multiple class="form-select" id="postTechStack" name="postTechStack" required>
-                                <option value="Java">Java</option>
+                            <select class="form-select form-mod" id="postTechStack" name="postTechStack" placeholder="Ex: Java, Spring Boot" data-search="true" multiple required>
+                                <option value="Java" selected>Java</option>
                                 <option value="JavaScript">JavaScript</option>
                                 <!-- Additional options -->
                                 <option value="Swift">Swift</option>
@@ -194,7 +199,7 @@
                                 <option value="Game Development">Game Development</option>
                             </select>
                         </div>
-
+                        <br>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
